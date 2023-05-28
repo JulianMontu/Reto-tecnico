@@ -9,6 +9,7 @@ namespace Space.Aplication.Services.Vehiculo
 {
     public class VehiculoServices
     {
+
         public VehicleDTO GetVehiculo()
         {
             VehicleDTO vehicle = new VehicleDTO();
@@ -20,12 +21,12 @@ namespace Space.Aplication.Services.Vehiculo
             vehicle.IsTripulate = 1;
 
             return vehicle;
-            
+
         }
 
         public SpacecraftDTO GetSpacecraft()
         {
-            SpacecraftDTO spacecraftDTO =  new SpacecraftDTO();
+            SpacecraftDTO spacecraftDTO = new SpacecraftDTO();
             spacecraftDTO.Id = 2;
             spacecraftDTO.Name = "Test";
             spacecraftDTO.MaxSpeed = 10;
