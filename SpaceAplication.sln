@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space.Aplication", "Space.Aplication\Space.Aplication.csproj", "{F53012E3-04B1-4EE6-8B3E-1A215FA83307}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Space.Aplication", "Space.Aplication\Space.Aplication.csproj", "{F53012E3-04B1-4EE6-8B3E-1A215FA83307}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AC35373B-75E4-4367-9168-E9EA45EDA16C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space.Domain", "Space.Domain\Space.Domain.csproj", "{F20858E6-819E-4CEF-8ADC-106D9A05B895}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Space.Domain", "Space.Domain\Space.Domain.csproj", "{F20858E6-819E-4CEF-8ADC-106D9A05B895}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space.Infrastructure", "Space.Infrastructure\Space.Infrastructure.csproj", "{1EC73841-B6CB-4383-81A2-EA461EFFE21A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Space.Infrastructure", "Space.Infrastructure\Space.Infrastructure.csproj", "{1EC73841-B6CB-4383-81A2-EA461EFFE21A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space.Utilities", "Space.Utilities\Space.Utilities.csproj", "{008050EF-8251-424C-B4DD-5838901D78A5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space.Web", "Space.Web\Space.Web.csproj", "{ED16F66F-E8C5-49D6-BC34-7EFD7642320B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Space.Utilities", "Space.Utilities\Space.Utilities.csproj", "{008050EF-8251-424C-B4DD-5838901D78A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FC2C3E91-F3BF-483A-BE86-B9C63663C0DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space.Web", "Space.web1\Space.Web.csproj", "{5A400458-10F9-4B4C-B476-309C6EF07F60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,10 @@ Global
 		{008050EF-8251-424C-B4DD-5838901D78A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{008050EF-8251-424C-B4DD-5838901D78A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{008050EF-8251-424C-B4DD-5838901D78A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED16F66F-E8C5-49D6-BC34-7EFD7642320B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED16F66F-E8C5-49D6-BC34-7EFD7642320B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED16F66F-E8C5-49D6-BC34-7EFD7642320B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED16F66F-E8C5-49D6-BC34-7EFD7642320B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A400458-10F9-4B4C-B476-309C6EF07F60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A400458-10F9-4B4C-B476-309C6EF07F60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A400458-10F9-4B4C-B476-309C6EF07F60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A400458-10F9-4B4C-B476-309C6EF07F60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,7 +52,7 @@ Global
 		{F20858E6-819E-4CEF-8ADC-106D9A05B895} = {AC35373B-75E4-4367-9168-E9EA45EDA16C}
 		{1EC73841-B6CB-4383-81A2-EA461EFFE21A} = {AC35373B-75E4-4367-9168-E9EA45EDA16C}
 		{008050EF-8251-424C-B4DD-5838901D78A5} = {AC35373B-75E4-4367-9168-E9EA45EDA16C}
-		{ED16F66F-E8C5-49D6-BC34-7EFD7642320B} = {AC35373B-75E4-4367-9168-E9EA45EDA16C}
+		{5A400458-10F9-4B4C-B476-309C6EF07F60} = {AC35373B-75E4-4367-9168-E9EA45EDA16C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39E3E9B5-06E7-4EF2-A918-CBBE88A5A088}
