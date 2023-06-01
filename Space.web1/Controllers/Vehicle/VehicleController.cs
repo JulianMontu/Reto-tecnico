@@ -8,13 +8,24 @@ namespace Space.Web.Controllers.Vehicle
     [ApiController]
     public class VehicleController : ControllerBase
     {
-        [HttpGet(Name = "GetVehicle")]
-        public VehicleDTO GetVehicle()
+        private readonly VehiculoServices _vehiculoServicio;
+        public VehicleController(VehiculoServices vehiculoServicio)
         {
-            VehiculoServices vehiculoServices = new VehiculoServices();
-
-            return vehiculoServices.GetSpacecraft();
+            _vehiculoServicio = vehiculoServicio;
         }
+
+        [HttpGet(Name = "GetVehicle")]
+        public ActionResult<IEnumerable<VehicleDTO>> GetVehicle()
+        {
+            var vehiculosDTO = _vehiculoServicio.GetVehiculo();
+            return vehiculosDTO;
+        }
+        //public VehicleDTO GetVehicle()
+        //{
+        //    VehiculoServices vehiculoServices = new VehiculoServices();
+
+        //    return vehiculoServices.GetSpacecraft();
+        //}
 
     }
 }

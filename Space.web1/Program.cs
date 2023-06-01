@@ -1,3 +1,6 @@
+using POS.Infrastructure.Extensions;
+using Space.Infrastructure.Persistencia.Contexts.Interfaces;
+
 namespace Space.web1
 {
     public class Program
@@ -5,6 +8,11 @@ namespace Space.web1
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+
+
+            var Configuration = builder.Configuration;
+            builder.Services.AddInjectionInfraestructure(Configuration);
 
             // Add services to the container.
 
@@ -14,6 +22,15 @@ namespace Space.web1
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var services = scope.ServiceProvider;
+            //    var dbInitializer = services.GetRequiredService<IDbInitializer>();
+            //    // Inicializar la base de datos
+            //    dbInitializer.Initialize();
+            //}
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
