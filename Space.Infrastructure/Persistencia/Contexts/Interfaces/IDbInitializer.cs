@@ -8,6 +8,6 @@ namespace Space.Infrastructure.Persistencia.Contexts.Interfaces
 {
     public interface IDbInitializer
     {
-        public void Initialize(SpaceContext context);
+        public void Initialize();
     }
 }

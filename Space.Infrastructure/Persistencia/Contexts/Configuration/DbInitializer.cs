@@ -16,7 +16,7 @@ namespace DataBaseInMemory.DataContext.Data
             _context = context;
         }
 
-        public void Initialize(SpaceContext context)
+        public void Initialize()
         {
             // Lógica de inicialización de la base de datos
             if (!_context.Vehiculos.Any())

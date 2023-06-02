@@ -1,4 +1,6 @@
 using POS.Infrastructure.Extensions;
+using Space.Aplication.Interfaces;
+using Space.Aplication.Services.Vehiculo;
 using Space.Infrastructure.Persistencia.Contexts.Interfaces;
 
 namespace Space.web1
@@ -12,16 +14,23 @@ namespace Space.web1
 
 
             var Configuration = builder.Configuration;
-            builder.Services.AddInjectionInfraestructure(Configuration);
+            var services = builder.Services;
 
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            services.AddAutoMapper(typeof(Program));
+            services.AddInjectionInfraestructure(Configuration);
+            services.AddControllers();
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen();
+            services.AddScoped<IVehiculoServices, VehiculoServices>();
 
             var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var serviceProvider = scope.ServiceProvider;
+                var dbInitializer = serviceProvider.GetRequiredService<IDbInitializer>();
+                dbInitializer.Initialize();
+            }
 
 
             //using (var scope = app.Services.CreateScope())

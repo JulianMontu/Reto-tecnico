@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Space.Aplication.DTOS;
+using Space.Aplication.Interfaces;
 using Space.Aplication.Services.Vehiculo;
 
 namespace Space.Web.Controllers.Vehicle
@@ -8,16 +9,17 @@ namespace Space.Web.Controllers.Vehicle
     [ApiController]
     public class VehicleController : ControllerBase
     {
-        private readonly VehiculoServices _vehiculoServicio;
-        public VehicleController(VehiculoServices vehiculoServicio)
+
+        private readonly IVehiculoServices _vehiculoServices;
+        public VehicleController(IVehiculoServices vehiculoServicio)
         {
-            _vehiculoServicio = vehiculoServicio;
+            _vehiculoServices = vehiculoServicio;
         }
 
         [HttpGet(Name = "GetVehicle")]
         public ActionResult<IEnumerable<VehicleDTO>> GetVehicle()
         {
-            var vehiculosDTO = _vehiculoServicio.GetVehiculo();
+            var vehiculosDTO = _vehiculoServices.GetVehiculo();
             return vehiculosDTO;
         }
         //public VehicleDTO GetVehicle()

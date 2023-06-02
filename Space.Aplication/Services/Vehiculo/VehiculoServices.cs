@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Space.Aplication.DTOS;
+using Space.Aplication.Interfaces;
 using Space.Infrastructure.Persistencia.Contexts;
 using Space.Infrastructure.Persistencia.Contexts.Interfaces;
 using System;
@@ -10,10 +11,11 @@ using System.Threading.Tasks;
 
 namespace Space.Aplication.Services.Vehiculo
 {
-    public class VehiculoServices
+    public class VehiculoServices : IVehiculoServices
     {
         private readonly SpaceContext _context;
         private readonly IMapper _mapper;
+        
 
         public VehiculoServices(SpaceContext context,  IMapper mapper)
         {
