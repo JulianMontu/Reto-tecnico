@@ -1,6 +1,7 @@
 using POS.Infrastructure.Extensions;
 using Space.Aplication.Interfaces;
 using Space.Aplication.Services.Vehiculo;
+using Space.Infrastructure.Persistencia.AutoMapper;
 using Space.Infrastructure.Persistencia.Contexts.Interfaces;
 
 namespace Space.web1
@@ -16,7 +17,7 @@ namespace Space.web1
             var Configuration = builder.Configuration;
             var services = builder.Services;
 
-            services.AddAutoMapper(typeof(Program));
+            services.AddAutoMapper(typeof(AutoMapperProfile));
             services.AddInjectionInfraestructure(Configuration);
             services.AddControllers();
             services.AddEndpointsApiExplorer();
