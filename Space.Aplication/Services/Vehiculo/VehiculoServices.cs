@@ -1,4 +1,8 @@
-﻿using Space.Aplication.DTOS;
+﻿using AutoMapper;
+using Space.Aplication.DTOS;
+using Space.Aplication.Interfaces;
+using Space.Infrastructure.Persistencia.Contexts;
+using Space.Infrastructure.Persistencia.Contexts.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,21 +11,24 @@ using System.Threading.Tasks;
 
 namespace Space.Aplication.Services.Vehiculo
 {
-    public class VehiculoServices
+    public class VehiculoServices : IVehiculoServices
     {
+        private readonly SpaceContext _context;
+        private readonly IMapper _mapper;
+        
 
-        public VehicleDTO GetVehiculo()
+        public VehiculoServices(SpaceContext context,  IMapper mapper)
         {
-            VehicleDTO vehicle = new VehicleDTO();
+            _context = context;
+            _mapper = mapper;
+        }
 
-            vehicle.Id = 1;
-            vehicle.Name = "Test";
-            vehicle.MaxSpeed = 10;
-            vehicle.Color = "red";
-            vehicle.IsTripulate = 1;
+        public List<VehicleDTO> GetVehiculo()
+        {
+            var vehiculos = _context.Vehiculos.ToList();
+            var vehiculosDTO = _mapper.Map<List<VehicleDTO>>(vehiculos);
 
-            return vehicle;
-
+            return vehiculosDTO;
         }
 
         public SpacecraftDTO GetSpacecraft()

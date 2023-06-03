@@ -13,7 +13,5 @@ namespace Space.Domain.Entities
         public int IsTripulate { get; set; }
         public string? Color { get; set; }
         public int MaxSpeed { get; set; }
-        public int NumPassengers { get; set; }
-
     }
 }
