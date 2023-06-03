@@ -11,6 +11,9 @@ namespace Space.Aplication.Interfaces
     {
         public List<VehicleDTO> GetVehiculo();
         public SpacecraftDTO GetSpacecraft();
+        public VehicleDTO CreateVehicle(VehicleDTO vehicleDTO);
+        public VehicleDTO UpdateVehicle(int vehicleId, VehicleDTO updatedVehicleDTO);
+        public void DeleteVehiculo(int id);
 
     }
 }
